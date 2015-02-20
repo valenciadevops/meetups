@@ -1,0 +1,26 @@
+https://portal.azure.com/
+Select subscription
+Deploy Docker instance
+docker pull pollosp/aspnvnext:mod5 
+#Enseñar código con ASP
+docker run -i -t pollosp/aspnvnext:mod5 /bin/bash
+#DOCKER FILE #docker build -t demiumaspnet
+FROM pollosp/aspnvnext:mod5 
+# set the working directory for subsequent commands
+WORKDIR /HelloWorldVNext/src/hellomvc
+#Set environment vars
+ENV PATH $PATH:/root/.kre/packages/default/bin
+# (listening on port 5000 by default)
+ENTRYPOINT ["k", "web"]
+Abrir endpoint en azure
+
+docker run -t -d -p 8081:5000 demiumaspnet
+
+
+
+sudo /bin/bash
+docker build -t myapp .
+docker images
+docker run -t -d -p 80:5004 myapp
+docker ps
+

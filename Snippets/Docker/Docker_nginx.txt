@@ -1,0 +1,20 @@
+mkdir docker-nginx
+cd docker-nginx
+mkdir web
+cd web
+     echo “<h1>Hola geeks </h1> “ > index.html 
+cd ..
+### create docker file ###
+Dockerfile
+FROM nginx
+COPY web/ /usr/share/nginx/html
+
+docker build -t ngnixgeeks:test .
+docker images
+docker run -i -t 8d2596596597 /bin/bash
+docker run -p 80:80 -d 8d2596596597
+docker ps
+docker stats 8d2596596597
+docker commit -a "olopez" -m "prueba docker geekshub" 8b44c15df067 pollosp/nginx:geeks
+docker push pollosp/nginx:geeks
+
